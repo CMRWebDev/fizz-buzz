@@ -7,10 +7,13 @@ $(document).ready(function() {
  	// Variables
  	var user_choice = document.getElementById('user_number');
  	var user_choice_val = user_choice.value;
+ 	var user_choice_num = Number(user_choice_val);
+ 	
 
- 	function FzBzFunction(user_choice){
+ 	
+	function FzBzFunction(max){
 
-	for (i = 1; i < user_choice; i++) {
+	for (i = 1; i <= max; i++) {
 		if ((i % 3 == 0 && i % 5 == 0)) {
 			document.write("FizzBuzz");
 			document.write("<br>");
@@ -30,7 +33,10 @@ $(document).ready(function() {
 	}
 }
 
- });
+ FzBzFunction(user_choice_num);
+
+});
+
 });
 
 // convert string to number
